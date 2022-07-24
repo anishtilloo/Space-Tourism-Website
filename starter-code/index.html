@@ -17,23 +17,60 @@
   </head>
   <body class="main-body">
     <header class="navbar flex">
-      <div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg></div>
-      <button class="mobile-nav-toggle" aria-controls="navbar-list" aria-expanded="false"><span class="sr-only">Menu</span></button>
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+          <g fill="none" fill-rule="evenodd">
+            <circle cx="24" cy="24" r="24" fill="#FFF" />
+            <path
+              fill="#0B0D17"
+              d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"
+            />
+          </g>
+        </svg>
+      </div>
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="navbar-list"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
       <nav>
-      <ul data-visible="false" id="navbar-list" class="navbar-list flex">
-        <li><a href="index.html"><span aria-hidden="true">00</span>Home</a></li>
-        <li><a href="destination-europa.html"><span aria-hidden="true">01</span>Destination</a></li>
-        <li><a href="#"><span aria-hidden="true">02</span>Crew</a></li>
-        <li><a href="#"><span aria-hidden="true">03</span>Technology</a></li>
-      </ul>
-    </nav>
+        <ul data-visible="false" id="navbar-list" class="navbar-list flex">
+          <li>
+            <a href="index.html"><span aria-hidden="true">00</span>Home</a>
+          </li>
+          <li>
+            <a href="destination-europa.html"
+              ><span aria-hidden="true">01</span>Destination</a
+            >
+          </li>
+          <li>
+            <a href="#"><span aria-hidden="true">02</span>Crew</a>
+          </li>
+          <li>
+            <a href="#"><span aria-hidden="true">03</span>Technology</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-    <!-- <p>
-      So, you want to travel to Space Let’s face it; if you want to go to space,
-      you might as well genuinely go to outer space and not hover kind of on the
-      edge of it. Well sit back, and relax because we’ll give you a truly out of
-      this world experience! Explore
-    </p>
-  </body> -->
+    <div class="content flex">
+      <div class="content-left position-of-text flex">
+        <span class="first-line">SO, YOU WANT TO TRAVEL TO</span>
+        <span class="bold-space">SPACE</span>
+        <span class="para flex">
+          Let’s face it; if you want to go to space, you might as well genuinely
+          go to outer space and not hover kind of on the edge of it. Well sit
+          back, and relax because we’ll give you a truly out of this world
+          experience!
+        </span>
+      </div>
+      <div class="content-right position-of-circle flex">
+        <div class="circle">
+          <span class="text-in-circle">Explore</span>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

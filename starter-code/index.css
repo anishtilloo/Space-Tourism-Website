@@ -1,5 +1,5 @@
 /* ------------------- */
-/* Reset               */
+/* -------Reset--------*/
 /* ------------------- */
 
 /* Box Sizing */
@@ -8,6 +8,12 @@
 *::after {
   box-sizing: border-box;
 }
+
+/* * {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+} */
 
 /* Reset margins */
 body,
@@ -20,6 +26,7 @@ p,
 figure,
 picture {
   margin: 0;
+  padding: 0;
 }
 
 /* set up the body */
@@ -89,15 +96,25 @@ body {
   border: 0;
 }
 
+.content-left {
+  width: 50%;
+  float: left;
+}
+
+.content-right {
+  width: 50%;
+  float: right;
+}
+
 /* ------------------- */
-/* Utility Classes     END           */
+/*----------------------------------------------- Utility Classes END ---------------------------------------------------------------------*/
 /* ------------------- */
 
 /*////////////////////////////////////// MAIN CSS ////////////////////////////////////////////// */
 .main-body {
-  /* background: steelblue; */
   background-image: url("./assets/home/background-home-desktop.jpg");
-  /* margin-right: 0; */
+  background-size: 100%;
+  /* background-repeat: no-repeat; */
 }
 
 .navbar {
@@ -144,9 +161,60 @@ body {
 /* Media Queries */
 
 /* TABLET NAVIGATION */
+@media (max-width: 55rem) {
+  .main-body {
+    background-image: url("./assets/home/background-home-tablet.jpg");
+    background-size: 100%;
+  }
+}
+
+/* .navbar-list {
+    --gap: 2em;
+
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+
+    padding: min(30vh, 10rem) 2em;
+    flex-direction: column;
+
+    transform: translateX(100%);
+    transition: transform 350ms ease-in-out;
+  }
+
+  .navbar-list[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    background-color: transparent;
+    background-image: url("assets/shared/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    width: 1.8rem;
+    border: 0;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
+.mobile-nav-toggle[aria-expanded="true"] {
+  background-image: url("assets/shared/icon-close.svg");
+} */
+
 @media (min-width: 35em) and (max-width: 45em) {
   .main-body {
     background-image: url("./assets/home/background-home-tablet.jpg");
+    background-size: 100%;
+  }
+
+  .navbar-list {
+    --gap: 3rem;
+    padding-block: 2rem;
+    padding-inline: clamp(3rem, 10vh, 10rem);
   }
 
   .navbar-list a > span[aria-hidden] {
@@ -166,6 +234,7 @@ body {
 @media (max-width: 35em) {
   .main-body {
     background-image: url("./assets/home/background-home-mobile.jpg");
+    background-size: contain;
   }
 
   .navbar-list {
@@ -206,3 +275,70 @@ body {
 }
 
 /*////////////////////////////////////////////// Navbar End /////////////////////////////////////////////*/
+
+/*------------------------ Content of Home Page ----------------------------*/
+
+.content {
+  color: #ffffff;
+  text-align: left;
+}
+
+.position-of-circle {
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  position: relative;
+  margin-top: 14rem;
+  margin-left: 8rem;
+  padding-block: 4rem;
+  padding-left: 2.2rem;
+  padding-right: 0.5rem;
+  padding: auto;
+  height: 12rem;
+  width: 12rem;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.circle:hover,
+.circle:active {
+  height: 20rem;
+  width: 20rem;
+  padding-block: 8rem;
+  padding-inline: 6rem;
+  /* padding-left: 2.2rem;
+  padding-right: 0.5rem; */
+}
+
+.text-in-circle {
+  position: absolute;
+  /* margin-inline: 4rem;
+  margin-block: 5.6rem; */
+
+  font-size: 2.5rem;
+  z-index: 1000;
+  color: #393939;
+}
+
+.position-of-text {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: larger;
+}
+
+.first-line {
+  font-size: xx-large;
+}
+
+.bold-space {
+  font-size: 8rem;
+  letter-spacing: 10px;
+}
+
+.para {
+  margin-inline: 10rem;
+}
